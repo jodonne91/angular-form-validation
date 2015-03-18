@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = 'appModule'>
   <head>
     <title>Form Validation</title>
     <link href="index.css" rel="stylesheet" />
-  </head>
-  <body>
 
-    <script src="libs/angular.js"></script>
-    <script src="index.js"></script>
-    
+    <script src='libs/underscore.js'></script>
+    <script src='libs/angular.js'></script>
+    <script src='index.js'></script>
+  </head>
+  <body ng-controller='appController'>
+
+    <form name='input' ng-submit="submitButton()">
+	    <h3>Please add your input to the feilds:</h3>
+	    <h4>Name:</h4> 
+	    <input type='text' class='name-input' ng-model='name' ng-class='{error: errors.name, valid: !errors.name}'></input>
+	    <h5 class='red' ng-hide='checks.name'>Name feild cannot be left blank</h5>
+	    <h4>Email:</h4>
+	    <input type='text' class='email-input' ng-model='email' ng-class='{error: errors.email, valid: !errors.email}'></input>
+	    <h5 class='red' ng-hide='checks.email'>Email must contain an @ symbol</h5>
+	    <h4>Website:</h4>
+	    <input type='text' class='website-input' ng-model='website' ng-class='{error: errors.website, valid: !errors.website}'></input>
+	    <h5 class = 'red' ng-hide='checks.website'>Website must begin with http://</h5>
+	    <h4>Message:</h4> 
+	    <textarea type='text' class='message-input' ng-model='message' ng-class='{error: errors.message, valid: !errors.message}'></textarea>
+	    <h5 class='red' ng-hide='checks.message'>Message cannot be left blank</h5>
+	    <button name='input'>Submit</button> 
+    </form>
+
   </body>
 </html>

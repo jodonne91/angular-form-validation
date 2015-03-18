@@ -23,7 +23,7 @@ Use CSS to style the form to be responsive. `desktop.png` and `mobile.png` are v
 
 ### Normal Mode
 
-Add the necessary directives in `test.html`, and write code in `index.css`
+Add the necessary directives in `test.html`, and write code in `index.js`
 
 You'll need to use the following directives:
 

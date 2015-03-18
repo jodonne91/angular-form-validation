@@ -1,0 +1,26 @@
+.error{
+
+	border-left: 4px solid red;
+
+}
+
+.valid{
+
+	border-left: 4px solid black;
+
+}
+
+input{
+	width: 200px;
+	font-size: 20px;
+}
+
+textarea{
+	width: 300px;
+	height: 100px;
+	font-size: 18px;
+}
+
+.red{
+	color: red;
+}
